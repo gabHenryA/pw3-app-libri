@@ -1,5 +1,6 @@
 import './App.css'
 import CardBooks from './components/CardBooks'
+import capaLivro from './assets/livros/cavernas_aco.jpg'
 
 function App() {
 
@@ -9,17 +10,9 @@ function App() {
       <CardBooks
         titulo='Tipos Psicológicos'
         autor='Carl Jung'
+        imagem={capaLivro}
       />
     
-      <CardBooks
-        titulo='O Hobbit'
-        autor='J.R.R. Tolkien'
-      />
-
-      <CardBooks
-        titulo='Senhor dos Aneis: A Sociedade do Anel'
-        autor='J.R.R. Tolkien'
-      />
 
     </>
   )
