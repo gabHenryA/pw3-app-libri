@@ -7,11 +7,12 @@ function Select({name, text}) {
         <div className={styles.form_control}>
             <label htmlFor={name}>{text}</label>
             <select name={name} id={name}>
-                <options>Selecione uma cartegoria</options>
-                <options>Ficção científica</options>
-                <options>Fantasia heroica</options>
-                <options>Suspense</options>
-                <options>Terror</options>
+                <option>Selecione uma cartegoria</option>
+                <option>Fantasia heroica</option>
+                <option>Ficção científica</option>
+                <option>Distopia</option>
+                <option>Suspense</option>
+                <option>Terror</option>
             </select>
         </div>
         
