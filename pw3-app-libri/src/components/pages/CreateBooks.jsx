@@ -50,7 +50,7 @@ const CreateBooks = () => {
     /* INSERÇÃO DOS DADOS DE LIVRO */
     function createBook(book) {
         
-        // console.log(JSON.stringify(book))
+        console.log(JSON.stringify(book))
 
         fetch('http://localhost:5000/inserirLivro', {
                 method:'POST',
@@ -87,7 +87,7 @@ const CreateBooks = () => {
         <section className={style.create_book_container}>
             <h1>CADASTRO DE LIVROS</h1>
 
-            <form submit={submit}>
+            <form onSubmit={submit}>
 
                 <Input
                     type='text'
@@ -121,7 +121,7 @@ const CreateBooks = () => {
 
                 <Button
                     rotulo='Cadastrar livro'
-            />
+                />
 
             </form>
 
