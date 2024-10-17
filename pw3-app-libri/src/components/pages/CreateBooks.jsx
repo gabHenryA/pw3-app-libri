@@ -21,6 +21,12 @@ const CreateBooks = () => {
         console.log(book)
     }
 
+    /* CAPTURA OS DADOS DA SELECT */
+    function handleChangeCategory(event) {
+        setBook({...book, cod_categoria: event.target.value});
+        console.log(book);
+    }
+
     /* RECUPERAR OS DADOS DE CAREGORIAS DA APIREST */
     useEffect(()=>{
         fetch('http://localhost:5000/listagemCateorias',{
@@ -99,7 +105,7 @@ const CreateBooks = () => {
 
                 <Input
                     type='text'
-                    name='autor_autor'
+                    name='autor_livro'
                     placeHolder='Digite o nome do autor'
                     text='Nome do autor'
                     handlerChangeBookProp={handlerChangeBook}
@@ -117,6 +123,7 @@ const CreateBooks = () => {
                     name='categoria'
                     text='Escolha uma categoria de livro'
                     options={categorias}
+                    handleChangeCategory={handleChangeCategory}
                 />
 
                 <Button
