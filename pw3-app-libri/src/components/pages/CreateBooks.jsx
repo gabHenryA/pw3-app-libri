@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import { useNavigate } from 'react-router-dom'
 import style from './CreateBooks.module.css'
 
 import Input from "../forms/Input";
@@ -8,6 +8,8 @@ import Select from "../forms/Select";
 import Button from "../forms/Button";
 
 const CreateBooks = () => {
+
+    const navigate = useNavigate();
 
     /* DEFINE O STATE DE DADOS DAS CATEGORIAS */
     const [categorias, setCategorias] = useState([])
@@ -74,7 +76,7 @@ const CreateBooks = () => {
         .then(
                 (data)=>{
                 console.log(data);
-                // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
+                navigate('/listBooks',{state:'LIVRO CADASTRADO COM SUCESSO!'})
                 }
         )
         .catch(

@@ -5,6 +5,7 @@ import NavBar from './components/layout/NavBar'
 import Container from './components/layout/Container'
 import ListBooks from './components/pages/ListBooks'
 import CreateBooks from './components/pages/CreateBooks'
+import DetailBooks from './components/pages/DetailBooks'
 import Home from './components/pages/Home'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='/createBooks' element={<CreateBooks/>}/>
               <Route path='/listBooks' element={<ListBooks/>}/>
+              <Route path='/detailBooks/:cod_livro' element={<DetailBooks/>}/>
             </Route>
 
           </Routes>
